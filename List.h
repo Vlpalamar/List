@@ -113,20 +113,18 @@ inline T List<T, size>::pop_back()
 		val = last->value;
 		temp = last;
 		
-		if (length > 1)
+		if (length > 2)
 		{
 			for (size_t i = 0; i < k - 2; i++)
 			{
 				priv = priv->next;
 			}
-			last = priv;
-
 		}
 		else
 		{
 			this->pop_front();
 		}
-			
+		last = priv;
 			
 		delete temp;
 		length--;
